@@ -1,0 +1,849 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C0DF3DE1A477CDB009BF562 /* ConvolutionFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C0DF3DC1A477CDB009BF562 /* ConvolutionFilter.cpp */; };
+		0C0DF3E41A477EF2009BF562 /* ChannelsWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C0DF3E11A477EF2009BF562 /* ChannelsWindow.cpp */; };
+		0C1C1A0D1A98DAB0008EDC85 /* FretboardDestinationBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C1A0C1A98DAB0008EDC85 /* FretboardDestinationBridge.mm */; };
+		0C21304F1954EFF800A7787D /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C21304E1954EFF800A7787D /* Utils.m */; };
+		0C245C451AA8AC130029E6CD /* MelodyComposerSettingsTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C245C441AA8AC130029E6CD /* MelodyComposerSettingsTabViewController.m */; };
+		0C322385199296A4000F67F1 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C322384199296A4000F67F1 /* CoreMIDI.framework */; };
+		0C32238C199297A9000F67F1 /* MidiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C32238B199297A9000F67F1 /* MidiManager.m */; };
+		0C32238F19929F4C000F67F1 /* midi.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C32238E19929F4C000F67F1 /* midi.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0C3D4C8118F401FD0030A162 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3D4C8018F401FD0030A162 /* Foundation.framework */; };
+		0C3D4C8318F401FD0030A162 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3D4C8218F401FD0030A162 /* CoreGraphics.framework */; };
+		0C3D4C8518F401FD0030A162 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3D4C8418F401FD0030A162 /* UIKit.framework */; };
+		0C3D4C8B18F401FD0030A162 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0C3D4C8918F401FD0030A162 /* InfoPlist.strings */; };
+		0C3D4C8D18F401FD0030A162 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D4C8C18F401FD0030A162 /* main.m */; };
+		0C3D4C9118F401FD0030A162 /* felidadaeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D4C9018F401FD0030A162 /* felidadaeAppDelegate.m */; };
+		0C3D4C9718F401FD0030A162 /* InstrumentViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D4C9618F401FD0030A162 /* InstrumentViewController.mm */; };
+		0C3D4C9918F401FD0030A162 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C3D4C9818F401FD0030A162 /* Images.xcassets */; };
+		0C3D4CA018F401FD0030A162 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3D4C9F18F401FD0030A162 /* XCTest.framework */; };
+		0C3D4CA118F401FD0030A162 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3D4C8018F401FD0030A162 /* Foundation.framework */; };
+		0C3D4CA218F401FD0030A162 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3D4C8418F401FD0030A162 /* UIKit.framework */; };
+		0C3D4CB718F404570030A162 /* FretboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D4CB618F404570030A162 /* FretboardView.m */; };
+		0C4D7A161A800652009D94F2 /* EmptySegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4D7A151A800652009D94F2 /* EmptySegue.m */; };
+		0C5612E01AA9F271008E15BC /* BlackoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5612DF1AA9F271008E15BC /* BlackoutView.m */; };
+		0C746C481ABC916500AE0532 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C746C471ABC916500AE0532 /* DrawView.m */; };
+		0C7BF5971921706E0082F2A5 /* Synth.h in Sources */ = {isa = PBXBuildFile; fileRef = 0C7BF592192166DA0082F2A5 /* Synth.h */; };
+		0C7BF599192176D60082F2A5 /* Synth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C7BF598192176D60082F2A5 /* Synth.cpp */; };
+		0C7CFEA41A4C824C00DD505C /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7CFEA31A4C824C00DD505C /* Accelerate.framework */; };
+		0C7CFEA61A4DCDE800DD505C /* FourierTransformBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C7CFEA51A4DCDE800DD505C /* FourierTransformBox.cpp */; };
+		0C8D878F1953A3C800F30315 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C8D878D1953A3C800F30315 /* Main.storyboard */; };
+		0C8D879219544E8900F30315 /* MelodyComposer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8D879119544E8900F30315 /* MelodyComposer.m */; };
+		0C8E7F011A78076A001A8CBD /* FretboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8E7F001A78076A001A8CBD /* FretboardViewController.m */; };
+		0C8E7F041A7807F4001A8CBD /* MelodyComposerTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8E7F031A7807F4001A8CBD /* MelodyComposerTabViewController.m */; };
+		0C8E7F071A7808A4001A8CBD /* LooperTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8E7F061A7808A4001A8CBD /* LooperTabViewController.m */; };
+		0C8E7F0D1A782DD0001A8CBD /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8E7F0C1A782DD0001A8CBD /* MainViewController.m */; };
+		0C8E7F131A786000001A8CBD /* TabsContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8E7F121A786000001A8CBD /* TabsContainerViewController.m */; };
+		0C982A8C1911868D00DE5E9B /* SynthHost.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0C982A8B1911868D00DE5E9B /* SynthHost.mm */; };
+		0C982A9019125B2B00DE5E9B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C982A8E19125B2B00DE5E9B /* AudioToolbox.framework */; };
+		0CB5D21B1A95140700DB5F8C /* EaringMainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CB5D21D1A95140700DB5F8C /* EaringMainStoryboard.storyboard */; };
+		0CD72B321A49AAFB00F11656 /* PIR_fftw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CD72B2F1A49AAFB00F11656 /* PIR_fftw.cpp */; };
+		0CE608371A82E40E00D0F8FD /* GlidingValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE608361A82E40E00D0F8FD /* GlidingValue.m */; };
+		0CE608391A82E44100D0F8FD /* NotePosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE608381A82E44100D0F8FD /* NotePosition.m */; };
+		0CEBF0221A7ED6C000389C20 /* MidiSettingsTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CEBF0211A7ED6C000389C20 /* MidiSettingsTabViewController.m */; };
+		0CF7935A1A967279009BA575 /* TabChooserButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF793591A967279009BA575 /* TabChooserButton.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0C3D4CA318F401FD0030A162 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C3D4C7518F401FD0030A162 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C3D4C7C18F401FD0030A162;
+			remoteInfo = Earing;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0C0DF3D71A477C9D009BF562 /* AudioBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioBuffer.h; sourceTree = "<group>"; };
+		0C0DF3D81A477C9D009BF562 /* AudioInOutBuffers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioInOutBuffers.h; sourceTree = "<group>"; };
+		0C0DF3DC1A477CDB009BF562 /* ConvolutionFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConvolutionFilter.cpp; sourceTree = "<group>"; };
+		0C0DF3DD1A477CDB009BF562 /* ConvolutionFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConvolutionFilter.h; sourceTree = "<group>"; };
+		0C0DF3E11A477EF2009BF562 /* ChannelsWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ChannelsWindow.cpp; sourceTree = "<group>"; };
+		0C0DF3E21A477EF2009BF562 /* ChannelsWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelsWindow.h; sourceTree = "<group>"; };
+		0C0DF3E51A477F48009BF562 /* FMTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTypes.h; sourceTree = "<group>"; };
+		0C0DF3E71A47807F009BF562 /* IParameterizable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IParameterizable.h; sourceTree = "<group>"; };
+		0C0DF3E81A47807F009BF562 /* IProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IProcess.h; sourceTree = "<group>"; };
+		0C1C1A0B1A98DAB0008EDC85 /* FretboardDestinationBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FretboardDestinationBridge.h; sourceTree = "<group>"; };
+		0C1C1A0C1A98DAB0008EDC85 /* FretboardDestinationBridge.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FretboardDestinationBridge.mm; sourceTree = "<group>"; };
+		0C1FA86D1AA3D76B0059FDE4 /* DestinationDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DestinationDelegate.h; sourceTree = "<group>"; };
+		0C1FA86E1AA3D7CE0059FDE4 /* TunerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TunerDelegate.h; sourceTree = "<group>"; };
+		0C21304D1954EFF800A7787D /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		0C21304E1954EFF800A7787D /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		0C245C431AA8AC130029E6CD /* MelodyComposerSettingsTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MelodyComposerSettingsTabViewController.h; sourceTree = "<group>"; };
+		0C245C441AA8AC130029E6CD /* MelodyComposerSettingsTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MelodyComposerSettingsTabViewController.m; sourceTree = "<group>"; };
+		0C322384199296A4000F67F1 /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
+		0C32238A199297A9000F67F1 /* MidiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidiManager.h; sourceTree = "<group>"; };
+		0C32238B199297A9000F67F1 /* MidiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MidiManager.m; sourceTree = "<group>"; };
+		0C32238D19929F4C000F67F1 /* midi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = midi.h; sourceTree = "<group>"; };
+		0C32238E19929F4C000F67F1 /* midi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = midi.m; sourceTree = "<group>"; };
+		0C3D4C7D18F401FD0030A162 /* Earing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Earing.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C3D4C8018F401FD0030A162 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0C3D4C8218F401FD0030A162 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0C3D4C8418F401FD0030A162 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0C3D4C8818F401FD0030A162 /* Earing-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Earing-Info.plist"; sourceTree = "<group>"; };
+		0C3D4C8A18F401FD0030A162 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0C3D4C8C18F401FD0030A162 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0C3D4C8E18F401FD0030A162 /* Earing-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Earing-Prefix.pch"; sourceTree = "<group>"; };
+		0C3D4C8F18F401FD0030A162 /* felidadaeAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = felidadaeAppDelegate.h; sourceTree = "<group>"; };
+		0C3D4C9018F401FD0030A162 /* felidadaeAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = felidadaeAppDelegate.m; sourceTree = "<group>"; };
+		0C3D4C9518F401FD0030A162 /* InstrumentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstrumentViewController.h; sourceTree = "<group>"; };
+		0C3D4C9618F401FD0030A162 /* InstrumentViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = InstrumentViewController.mm; sourceTree = "<group>"; };
+		0C3D4C9818F401FD0030A162 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0C3D4C9E18F401FD0030A162 /* EaringTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EaringTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C3D4C9F18F401FD0030A162 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		0C3D4CB518F404570030A162 /* FretboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FretboardView.h; sourceTree = "<group>"; };
+		0C3D4CB618F404570030A162 /* FretboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FretboardView.m; sourceTree = "<group>"; };
+		0C4D7A141A800652009D94F2 /* EmptySegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptySegue.h; sourceTree = "<group>"; };
+		0C4D7A151A800652009D94F2 /* EmptySegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptySegue.m; sourceTree = "<group>"; };
+		0C5612DE1AA9F271008E15BC /* BlackoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackoutView.h; sourceTree = "<group>"; };
+		0C5612DF1AA9F271008E15BC /* BlackoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlackoutView.m; sourceTree = "<group>"; };
+		0C746C461ABC916500AE0532 /* DrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
+		0C746C471ABC916500AE0532 /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
+		0C7BF592192166DA0082F2A5 /* Synth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Synth.h; sourceTree = "<group>"; };
+		0C7BF598192176D60082F2A5 /* Synth.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Synth.cpp; sourceTree = "<group>"; };
+		0C7CFEA21A49D2DA00DD505C /* FourierTransformBox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FourierTransformBox.h; sourceTree = "<group>"; };
+		0C7CFEA31A4C824C00DD505C /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		0C7CFEA51A4DCDE800DD505C /* FourierTransformBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FourierTransformBox.cpp; sourceTree = "<group>"; };
+		0C8D878E1953A3C800F30315 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Earing/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0C8D879019544E8900F30315 /* MelodyComposer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MelodyComposer.h; sourceTree = "<group>"; };
+		0C8D879119544E8900F30315 /* MelodyComposer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MelodyComposer.m; sourceTree = "<group>"; };
+		0C8E7EFF1A78076A001A8CBD /* FretboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FretboardViewController.h; sourceTree = "<group>"; };
+		0C8E7F001A78076A001A8CBD /* FretboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FretboardViewController.m; sourceTree = "<group>"; };
+		0C8E7F021A7807F4001A8CBD /* MelodyComposerTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MelodyComposerTabViewController.h; sourceTree = "<group>"; };
+		0C8E7F031A7807F4001A8CBD /* MelodyComposerTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MelodyComposerTabViewController.m; sourceTree = "<group>"; };
+		0C8E7F051A7808A4001A8CBD /* LooperTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LooperTabViewController.h; sourceTree = "<group>"; };
+		0C8E7F061A7808A4001A8CBD /* LooperTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LooperTabViewController.m; sourceTree = "<group>"; };
+		0C8E7F0B1A782DD0001A8CBD /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		0C8E7F0C1A782DD0001A8CBD /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		0C8E7F111A786000001A8CBD /* TabsContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabsContainerViewController.h; sourceTree = "<group>"; };
+		0C8E7F121A786000001A8CBD /* TabsContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabsContainerViewController.m; sourceTree = "<group>"; };
+		0C982A8A1911868D00DE5E9B /* SynthHost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthHost.h; sourceTree = "<group>"; };
+		0C982A8B1911868D00DE5E9B /* SynthHost.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SynthHost.mm; sourceTree = "<group>"; };
+		0C982A8E19125B2B00DE5E9B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		0CA67E2E1AA9E28500AFDAEE /* UIParams.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIParams.h; sourceTree = "<group>"; };
+		0CB5D21C1A95140700DB5F8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/EaringMainStoryboard.storyboard; sourceTree = "<group>"; };
+		0CBDB2221A9C7D0C008EBE96 /* Tuner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tuner.h; sourceTree = "<group>"; };
+		0CD72B2E1A49AAFB00F11656 /* IRF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRF.h; sourceTree = "<group>"; };
+		0CD72B2F1A49AAFB00F11656 /* PIR_fftw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PIR_fftw.cpp; sourceTree = "<group>"; };
+		0CD72B301A49AAFB00F11656 /* PIR_fftw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PIR_fftw.h; sourceTree = "<group>"; };
+		0CD72B311A49AAFB00F11656 /* PIRBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PIRBase.h; sourceTree = "<group>"; };
+		0CE608331A82E34700D0F8FD /* FretboardEventsReceiver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FretboardEventsReceiver.h; sourceTree = "<group>"; };
+		0CE608341A82E37900D0F8FD /* NotePosition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotePosition.h; sourceTree = "<group>"; };
+		0CE608351A82E39900D0F8FD /* GlidingValue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlidingValue.h; sourceTree = "<group>"; };
+		0CE608361A82E40E00D0F8FD /* GlidingValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlidingValue.m; sourceTree = "<group>"; };
+		0CE608381A82E44100D0F8FD /* NotePosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotePosition.m; sourceTree = "<group>"; };
+		0CEBF0201A7ED6C000389C20 /* MidiSettingsTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidiSettingsTabViewController.h; sourceTree = "<group>"; };
+		0CEBF0211A7ED6C000389C20 /* MidiSettingsTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MidiSettingsTabViewController.m; sourceTree = "<group>"; };
+		0CF793581A967279009BA575 /* TabChooserButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabChooserButton.h; sourceTree = "<group>"; };
+		0CF793591A967279009BA575 /* TabChooserButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabChooserButton.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0C3D4C7A18F401FD0030A162 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C7CFEA41A4C824C00DD505C /* Accelerate.framework in Frameworks */,
+				0C322385199296A4000F67F1 /* CoreMIDI.framework in Frameworks */,
+				0C982A9019125B2B00DE5E9B /* AudioToolbox.framework in Frameworks */,
+				0C3D4C8318F401FD0030A162 /* CoreGraphics.framework in Frameworks */,
+				0C3D4C8518F401FD0030A162 /* UIKit.framework in Frameworks */,
+				0C3D4C8118F401FD0030A162 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C3D4C9B18F401FD0030A162 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C3D4CA018F401FD0030A162 /* XCTest.framework in Frameworks */,
+				0C3D4CA218F401FD0030A162 /* UIKit.framework in Frameworks */,
+				0C3D4CA118F401FD0030A162 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C037E031A9CF3F700965962 /* melodyComposer */ = {
+			isa = PBXGroup;
+			children = (
+				0C8E7F021A7807F4001A8CBD /* MelodyComposerTabViewController.h */,
+				0C8E7F031A7807F4001A8CBD /* MelodyComposerTabViewController.m */,
+				0C245C431AA8AC130029E6CD /* MelodyComposerSettingsTabViewController.h */,
+				0C245C441AA8AC130029E6CD /* MelodyComposerSettingsTabViewController.m */,
+			);
+			name = melodyComposer;
+			sourceTree = "<group>";
+		};
+		0C037E041A9CF40100965962 /* looper */ = {
+			isa = PBXGroup;
+			children = (
+				0C8E7F051A7808A4001A8CBD /* LooperTabViewController.h */,
+				0C8E7F061A7808A4001A8CBD /* LooperTabViewController.m */,
+			);
+			name = looper;
+			sourceTree = "<group>";
+		};
+		0C037E051A9CF40C00965962 /* midiSettings */ = {
+			isa = PBXGroup;
+			children = (
+				0CEBF0201A7ED6C000389C20 /* MidiSettingsTabViewController.h */,
+				0CEBF0211A7ED6C000389C20 /* MidiSettingsTabViewController.m */,
+			);
+			name = midiSettings;
+			sourceTree = "<group>";
+		};
+		0C037E061A9CF41D00965962 /* details */ = {
+			isa = PBXGroup;
+			children = (
+				0C4D7A141A800652009D94F2 /* EmptySegue.h */,
+				0C4D7A151A800652009D94F2 /* EmptySegue.m */,
+				0CF793581A967279009BA575 /* TabChooserButton.h */,
+				0CF793591A967279009BA575 /* TabChooserButton.m */,
+			);
+			name = details;
+			sourceTree = "<group>";
+		};
+		0C0DF3DF1A477DB9009BF562 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				0C7CFEA11A49D1E700DD505C /* FourierTransform */,
+				0C7CFE9F1A49B22A00DD505C /* ChannelsWindow */,
+				0CD72B341A49ABC700F11656 /* PIR */,
+				0CD72B2E1A49AAFB00F11656 /* IRF.h */,
+				0C0DF3DD1A477CDB009BF562 /* ConvolutionFilter.h */,
+				0C0DF3DC1A477CDB009BF562 /* ConvolutionFilter.cpp */,
+			);
+			name = Filter;
+			sourceTree = "<group>";
+		};
+		0C0DF3E01A477DC0009BF562 /* Synth */ = {
+			isa = PBXGroup;
+			children = (
+				0CBDB2221A9C7D0C008EBE96 /* Tuner.h */,
+				0C7BF592192166DA0082F2A5 /* Synth.h */,
+				0C7BF598192176D60082F2A5 /* Synth.cpp */,
+			);
+			name = Synth;
+			sourceTree = "<group>";
+		};
+		0C0DF3E61A47804F009BF562 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				0C0DF3E71A47807F009BF562 /* IParameterizable.h */,
+				0C0DF3E81A47807F009BF562 /* IProcess.h */,
+				0C0DF3D71A477C9D009BF562 /* AudioBuffer.h */,
+				0C0DF3D81A477C9D009BF562 /* AudioInOutBuffers.h */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		0C1C5F631951FC6800F565AC /* MelodyComposer */ = {
+			isa = PBXGroup;
+			children = (
+				0C8D879019544E8900F30315 /* MelodyComposer.h */,
+				0C8D879119544E8900F30315 /* MelodyComposer.m */,
+			);
+			name = MelodyComposer;
+			sourceTree = "<group>";
+		};
+		0C21304C1954EFE200A7787D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0C21304D1954EFF800A7787D /* Utils.h */,
+				0C21304E1954EFF800A7787D /* Utils.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		0C3223861992973D000F67F1 /* MidiManager */ = {
+			isa = PBXGroup;
+			children = (
+				0C32238D19929F4C000F67F1 /* midi.h */,
+				0C32238E19929F4C000F67F1 /* midi.m */,
+				0C32238A199297A9000F67F1 /* MidiManager.h */,
+				0C32238B199297A9000F67F1 /* MidiManager.m */,
+			);
+			name = MidiManager;
+			sourceTree = "<group>";
+		};
+		0C3D4C7418F401FD0030A162 = {
+			isa = PBXGroup;
+			children = (
+				0C3D4C8618F401FD0030A162 /* Earing */,
+				0C3D4C7F18F401FD0030A162 /* Frameworks */,
+				0C3D4C7E18F401FD0030A162 /* Products */,
+				0C8E7F101A782E1A001A8CBD /* ___deprecated */,
+			);
+			sourceTree = "<group>";
+		};
+		0C3D4C7E18F401FD0030A162 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0C3D4C7D18F401FD0030A162 /* Earing.app */,
+				0C3D4C9E18F401FD0030A162 /* EaringTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0C3D4C7F18F401FD0030A162 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C7CFEA31A4C824C00DD505C /* Accelerate.framework */,
+				0C322384199296A4000F67F1 /* CoreMIDI.framework */,
+				0C982A8E19125B2B00DE5E9B /* AudioToolbox.framework */,
+				0C3D4C8018F401FD0030A162 /* Foundation.framework */,
+				0C3D4C8218F401FD0030A162 /* CoreGraphics.framework */,
+				0C3D4C8418F401FD0030A162 /* UIKit.framework */,
+				0C3D4C9F18F401FD0030A162 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0C3D4C8618F401FD0030A162 /* Earing */ = {
+			isa = PBXGroup;
+			children = (
+				0C1C5F631951FC6800F565AC /* MelodyComposer */,
+				0C9BDEE51A9E28280019B3AA /* Destination */,
+				0CDCF31E1997B7FC006B6572 /* UserInterface */,
+				0C3D4C8718F401FD0030A162 /* Supporting Files */,
+			);
+			path = Earing;
+			sourceTree = "<group>";
+		};
+		0C3D4C8718F401FD0030A162 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0C21304C1954EFE200A7787D /* Utils */,
+				0C3D4C9818F401FD0030A162 /* Images.xcassets */,
+				0C3D4C8F18F401FD0030A162 /* felidadaeAppDelegate.h */,
+				0C3D4C9018F401FD0030A162 /* felidadaeAppDelegate.m */,
+				0C3D4C8818F401FD0030A162 /* Earing-Info.plist */,
+				0C3D4C8918F401FD0030A162 /* InfoPlist.strings */,
+				0C3D4C8C18F401FD0030A162 /* main.m */,
+				0C3D4C8E18F401FD0030A162 /* Earing-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0C746C451ABC913A00AE0532 /* others */ = {
+			isa = PBXGroup;
+			children = (
+				0C746C461ABC916500AE0532 /* DrawView.h */,
+				0C746C471ABC916500AE0532 /* DrawView.m */,
+			);
+			name = others;
+			sourceTree = "<group>";
+		};
+		0C7CFE9F1A49B22A00DD505C /* ChannelsWindow */ = {
+			isa = PBXGroup;
+			children = (
+				0C0DF3E11A477EF2009BF562 /* ChannelsWindow.cpp */,
+				0C0DF3E21A477EF2009BF562 /* ChannelsWindow.h */,
+			);
+			name = ChannelsWindow;
+			sourceTree = "<group>";
+		};
+		0C7CFEA11A49D1E700DD505C /* FourierTransform */ = {
+			isa = PBXGroup;
+			children = (
+				0C7CFEA21A49D2DA00DD505C /* FourierTransformBox.h */,
+				0C7CFEA51A4DCDE800DD505C /* FourierTransformBox.cpp */,
+			);
+			name = FourierTransform;
+			sourceTree = "<group>";
+		};
+		0C8E7F081A781EEE001A8CBD /* depracated */ = {
+			isa = PBXGroup;
+			children = (
+				0C8D878D1953A3C800F30315 /* Main.storyboard */,
+				0C3D4C9518F401FD0030A162 /* InstrumentViewController.h */,
+				0C3D4C9618F401FD0030A162 /* InstrumentViewController.mm */,
+			);
+			name = depracated;
+			sourceTree = "<group>";
+		};
+		0C8E7F0E1A782DE6001A8CBD /* Fretboard */ = {
+			isa = PBXGroup;
+			children = (
+				0CE6083A1A82E47F00D0F8FD /* FretboardView */,
+				0C1FA86D1AA3D76B0059FDE4 /* DestinationDelegate.h */,
+				0C1FA86E1AA3D7CE0059FDE4 /* TunerDelegate.h */,
+				0C8E7EFF1A78076A001A8CBD /* FretboardViewController.h */,
+				0C8E7F001A78076A001A8CBD /* FretboardViewController.m */,
+			);
+			name = Fretboard;
+			sourceTree = "<group>";
+		};
+		0C8E7F0F1A782E01001A8CBD /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				0C037E061A9CF41D00965962 /* details */,
+				0C037E051A9CF40C00965962 /* midiSettings */,
+				0C037E041A9CF40100965962 /* looper */,
+				0C037E031A9CF3F700965962 /* melodyComposer */,
+				0C8E7F111A786000001A8CBD /* TabsContainerViewController.h */,
+				0C8E7F121A786000001A8CBD /* TabsContainerViewController.m */,
+			);
+			name = Tabs;
+			sourceTree = "<group>";
+		};
+		0C8E7F101A782E1A001A8CBD /* ___deprecated */ = {
+			isa = PBXGroup;
+			children = (
+				0C8E7F081A781EEE001A8CBD /* depracated */,
+			);
+			name = "___deprecated";
+			path = Earing;
+			sourceTree = "<group>";
+		};
+		0C982A8D191186C100DE5E9B /* Synth */ = {
+			isa = PBXGroup;
+			children = (
+				0CDE42AD19976C5C004E0FE8 /* Core */,
+				0C0DF3E51A477F48009BF562 /* FMTypes.h */,
+				0C982A8A1911868D00DE5E9B /* SynthHost.h */,
+				0C982A8B1911868D00DE5E9B /* SynthHost.mm */,
+			);
+			name = Synth;
+			sourceTree = "<group>";
+		};
+		0C9BDEE41A9E27FC0019B3AA /* details */ = {
+			isa = PBXGroup;
+			children = (
+				0CE608351A82E39900D0F8FD /* GlidingValue.h */,
+				0CE608361A82E40E00D0F8FD /* GlidingValue.m */,
+				0CE608341A82E37900D0F8FD /* NotePosition.h */,
+				0CE608381A82E44100D0F8FD /* NotePosition.m */,
+				0C5612DE1AA9F271008E15BC /* BlackoutView.h */,
+				0C5612DF1AA9F271008E15BC /* BlackoutView.m */,
+			);
+			name = details;
+			sourceTree = "<group>";
+		};
+		0C9BDEE51A9E28280019B3AA /* Destination */ = {
+			isa = PBXGroup;
+			children = (
+				0C1C1A0B1A98DAB0008EDC85 /* FretboardDestinationBridge.h */,
+				0C1C1A0C1A98DAB0008EDC85 /* FretboardDestinationBridge.mm */,
+				0C982A8D191186C100DE5E9B /* Synth */,
+				0C3223861992973D000F67F1 /* MidiManager */,
+			);
+			name = Destination;
+			sourceTree = "<group>";
+		};
+		0CD72B341A49ABC700F11656 /* PIR */ = {
+			isa = PBXGroup;
+			children = (
+				0CD72B2F1A49AAFB00F11656 /* PIR_fftw.cpp */,
+				0CD72B301A49AAFB00F11656 /* PIR_fftw.h */,
+				0CD72B311A49AAFB00F11656 /* PIRBase.h */,
+			);
+			name = PIR;
+			sourceTree = "<group>";
+		};
+		0CDCF31E1997B7FC006B6572 /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				0CB5D21D1A95140700DB5F8C /* EaringMainStoryboard.storyboard */,
+				0CA67E2E1AA9E28500AFDAEE /* UIParams.h */,
+				0C8E7F0B1A782DD0001A8CBD /* MainViewController.h */,
+				0C8E7F0C1A782DD0001A8CBD /* MainViewController.m */,
+				0C746C451ABC913A00AE0532 /* others */,
+				0C8E7F0F1A782E01001A8CBD /* Tabs */,
+				0C8E7F0E1A782DE6001A8CBD /* Fretboard */,
+			);
+			name = UserInterface;
+			sourceTree = "<group>";
+		};
+		0CDE42AD19976C5C004E0FE8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				0C0DF3E61A47804F009BF562 /* Base */,
+				0C0DF3E01A477DC0009BF562 /* Synth */,
+				0C0DF3DF1A477DB9009BF562 /* Filter */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		0CE6083A1A82E47F00D0F8FD /* FretboardView */ = {
+			isa = PBXGroup;
+			children = (
+				0C9BDEE41A9E27FC0019B3AA /* details */,
+				0CE608331A82E34700D0F8FD /* FretboardEventsReceiver.h */,
+				0C3D4CB518F404570030A162 /* FretboardView.h */,
+				0C3D4CB618F404570030A162 /* FretboardView.m */,
+			);
+			name = FretboardView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0C3D4C7C18F401FD0030A162 /* Earing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C3D4CAF18F401FE0030A162 /* Build configuration list for PBXNativeTarget "Earing" */;
+			buildPhases = (
+				0C3D4C7918F401FD0030A162 /* Sources */,
+				0C3D4C7A18F401FD0030A162 /* Frameworks */,
+				0C3D4C7B18F401FD0030A162 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Earing;
+			productName = Earing;
+			productReference = 0C3D4C7D18F401FD0030A162 /* Earing.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0C3D4C9D18F401FD0030A162 /* EaringTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C3D4CB218F401FE0030A162 /* Build configuration list for PBXNativeTarget "EaringTests" */;
+			buildPhases = (
+				0C3D4C9A18F401FD0030A162 /* Sources */,
+				0C3D4C9B18F401FD0030A162 /* Frameworks */,
+				0C3D4C9C18F401FD0030A162 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0C3D4CA418F401FD0030A162 /* PBXTargetDependency */,
+			);
+			name = EaringTests;
+			productName = EaringTests;
+			productReference = 0C3D4C9E18F401FD0030A162 /* EaringTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0C3D4C7518F401FD0030A162 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = felidadae;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Kadlubek47;
+				TargetAttributes = {
+					0C3D4C7C18F401FD0030A162 = {
+						DevelopmentTeam = 3R8LE96SGP;
+					};
+					0C3D4C9D18F401FD0030A162 = {
+						TestTargetID = 0C3D4C7C18F401FD0030A162;
+					};
+				};
+			};
+			buildConfigurationList = 0C3D4C7818F401FD0030A162 /* Build configuration list for PBXProject "Earing" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0C3D4C7418F401FD0030A162;
+			productRefGroup = 0C3D4C7E18F401FD0030A162 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0C3D4C7C18F401FD0030A162 /* Earing */,
+				0C3D4C9D18F401FD0030A162 /* EaringTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0C3D4C7B18F401FD0030A162 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C8D878F1953A3C800F30315 /* Main.storyboard in Resources */,
+				0C3D4C9918F401FD0030A162 /* Images.xcassets in Resources */,
+				0CB5D21B1A95140700DB5F8C /* EaringMainStoryboard.storyboard in Resources */,
+				0C3D4C8B18F401FD0030A162 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C3D4C9C18F401FD0030A162 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0C3D4C7918F401FD0030A162 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C32238F19929F4C000F67F1 /* midi.m in Sources */,
+				0C5612E01AA9F271008E15BC /* BlackoutView.m in Sources */,
+				0C8E7F071A7808A4001A8CBD /* LooperTabViewController.m in Sources */,
+				0C21304F1954EFF800A7787D /* Utils.m in Sources */,
+				0CD72B321A49AAFB00F11656 /* PIR_fftw.cpp in Sources */,
+				0C0DF3DE1A477CDB009BF562 /* ConvolutionFilter.cpp in Sources */,
+				0C32238C199297A9000F67F1 /* MidiManager.m in Sources */,
+				0C8E7F0D1A782DD0001A8CBD /* MainViewController.m in Sources */,
+				0C1C1A0D1A98DAB0008EDC85 /* FretboardDestinationBridge.mm in Sources */,
+				0C0DF3E41A477EF2009BF562 /* ChannelsWindow.cpp in Sources */,
+				0C7BF5971921706E0082F2A5 /* Synth.h in Sources */,
+				0C3D4C9718F401FD0030A162 /* InstrumentViewController.mm in Sources */,
+				0C982A8C1911868D00DE5E9B /* SynthHost.mm in Sources */,
+				0C8E7F041A7807F4001A8CBD /* MelodyComposerTabViewController.m in Sources */,
+				0C245C451AA8AC130029E6CD /* MelodyComposerSettingsTabViewController.m in Sources */,
+				0CE608391A82E44100D0F8FD /* NotePosition.m in Sources */,
+				0C7BF599192176D60082F2A5 /* Synth.cpp in Sources */,
+				0C8D879219544E8900F30315 /* MelodyComposer.m in Sources */,
+				0CF7935A1A967279009BA575 /* TabChooserButton.m in Sources */,
+				0C7CFEA61A4DCDE800DD505C /* FourierTransformBox.cpp in Sources */,
+				0C8E7F011A78076A001A8CBD /* FretboardViewController.m in Sources */,
+				0CE608371A82E40E00D0F8FD /* GlidingValue.m in Sources */,
+				0C8E7F131A786000001A8CBD /* TabsContainerViewController.m in Sources */,
+				0C4D7A161A800652009D94F2 /* EmptySegue.m in Sources */,
+				0C746C481ABC916500AE0532 /* DrawView.m in Sources */,
+				0C3D4C9118F401FD0030A162 /* felidadaeAppDelegate.m in Sources */,
+				0C3D4CB718F404570030A162 /* FretboardView.m in Sources */,
+				0CEBF0221A7ED6C000389C20 /* MidiSettingsTabViewController.m in Sources */,
+				0C3D4C8D18F401FD0030A162 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C3D4C9A18F401FD0030A162 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0C3D4CA418F401FD0030A162 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C3D4C7C18F401FD0030A162 /* Earing */;
+			targetProxy = 0C3D4CA318F401FD0030A162 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0C3D4C8918F401FD0030A162 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0C3D4C8A18F401FD0030A162 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0C8D878D1953A3C800F30315 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0C8D878E1953A3C800F30315 /* Base */,
+			);
+			name = Main.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		0CB5D21D1A95140700DB5F8C /* EaringMainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0CB5D21C1A95140700DB5F8C /* Base */,
+			);
+			name = EaringMainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0C3D4CAD18F401FE0030A162 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		0C3D4CAE18F401FE0030A162 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0C3D4CB018F401FE0030A162 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Earing/Earing-Prefix.pch";
+				INFOPLIST_FILE = "Earing/Earing-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0C3D4CB118F401FE0030A162 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Earing/Earing-Prefix.pch";
+				INFOPLIST_FILE = "Earing/Earing-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		0C3D4CB318F401FE0030A162 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Earing.app/Earing";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Earing/Earing-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "EaringTests/EaringTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		0C3D4CB418F401FE0030A162 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Earing.app/Earing";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Earing/Earing-Prefix.pch";
+				INFOPLIST_FILE = "EaringTests/EaringTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0C3D4C7818F401FD0030A162 /* Build configuration list for PBXProject "Earing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C3D4CAD18F401FE0030A162 /* Debug */,
+				0C3D4CAE18F401FE0030A162 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C3D4CAF18F401FE0030A162 /* Build configuration list for PBXNativeTarget "Earing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C3D4CB018F401FE0030A162 /* Debug */,
+				0C3D4CB118F401FE0030A162 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C3D4CB218F401FE0030A162 /* Build configuration list for PBXNativeTarget "EaringTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C3D4CB318F401FE0030A162 /* Debug */,
+				0C3D4CB418F401FE0030A162 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0C3D4C7518F401FD0030A162 /* Project object */;
+}
