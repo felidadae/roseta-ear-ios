@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Wa4-Za-hyg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Wa4-Za-hyg">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -41,10 +41,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hXR-HK-YP6">
-                                <rect key="frame" x="45" y="0.0" width="260" height="100"/>
+                                <rect key="frame" x="15" y="0.0" width="320" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPY-k1-S9e">
-                                        <rect key="frame" x="90" y="10" width="80" height="80"/>
+                                        <rect key="frame" x="120" y="10" width="80" height="80"/>
                                         <color key="backgroundColor" red="0.93264615539999995" green="0.93261826039999995" blue="0.93263405560000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal">
@@ -72,7 +72,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udE-23-Un5">
-                                        <rect key="frame" x="180" y="10" width="80" height="80"/>
+                                        <rect key="frame" x="240" y="10" width="80" height="80"/>
                                         <color key="backgroundColor" red="0.93264615539999995" green="0.93261826039999995" blue="0.93263405560000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal">
@@ -88,7 +88,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="LYc-Hi-PKM" firstAttribute="width" secondItem="udE-23-Un5" secondAttribute="width" id="1Xk-a8-TaL"/>
-                                    <constraint firstAttribute="width" constant="260" id="89c-cs-3q5"/>
+                                    <constraint firstAttribute="width" constant="320" id="89c-cs-3q5"/>
                                     <constraint firstItem="LYc-Hi-PKM" firstAttribute="height" secondItem="CPY-k1-S9e" secondAttribute="height" id="Byi-aN-Hyz"/>
                                     <constraint firstItem="LYc-Hi-PKM" firstAttribute="height" secondItem="udE-23-Un5" secondAttribute="height" id="GGz-jt-QfC"/>
                                     <constraint firstAttribute="centerY" secondItem="LYc-Hi-PKM" secondAttribute="centerY" id="HP4-1U-NeU"/>
@@ -247,7 +247,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H3s-8h-FR7">
-                                <rect key="frame" x="-4" y="0.0" width="328" height="170"/>
+                                <rect key="frame" x="-4" y="-25" width="328" height="190"/>
                                 <connections>
                                     <segue destination="atP-zA-JkD" kind="embed" identifier="fretboard" id="5zb-dN-f1f"/>
                                 </connections>
@@ -268,9 +268,9 @@
                         <constraints>
                             <constraint firstItem="WqD-fz-rv7" firstAttribute="top" secondItem="w13-cd-S4L" secondAttribute="bottom" constant="-5" id="09a-pb-dEq"/>
                             <constraint firstAttribute="centerX" secondItem="w13-cd-S4L" secondAttribute="centerX" id="7Ry-9h-vVq"/>
-                            <constraint firstItem="WqD-fz-rv7" firstAttribute="top" secondItem="H3s-8h-FR7" secondAttribute="bottom" constant="50" id="CUD-Ga-KYc"/>
+                            <constraint firstItem="WqD-fz-rv7" firstAttribute="top" secondItem="H3s-8h-FR7" secondAttribute="bottom" constant="55" id="CUD-Ga-KYc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WqD-fz-rv7" secondAttribute="trailing" constant="-20" id="W55-Jx-uM9"/>
-                            <constraint firstItem="H3s-8h-FR7" firstAttribute="top" secondItem="UyB-v8-D2L" secondAttribute="bottom" id="dcz-Po-gcQ"/>
+                            <constraint firstItem="H3s-8h-FR7" firstAttribute="top" secondItem="UyB-v8-D2L" secondAttribute="bottom" constant="-25" id="dcz-Po-gcQ"/>
                             <constraint firstItem="H3s-8h-FR7" firstAttribute="leading" secondItem="lJ0-Wt-v5U" secondAttribute="leadingMargin" constant="-20" id="qSO-d0-h4G"/>
                             <constraint firstItem="WqD-fz-rv7" firstAttribute="leading" secondItem="lJ0-Wt-v5U" secondAttribute="leadingMargin" constant="-20" id="yPc-fk-eUl"/>
                             <constraint firstItem="vt9-mg-jSO" firstAttribute="top" secondItem="WqD-fz-rv7" secondAttribute="bottom" id="zFG-r7-ri4"/>

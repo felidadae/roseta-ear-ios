@@ -9,13 +9,13 @@
 @property (readwrite) id <FretboardEventsReceiver> receiverOfFretboardEvents;
 
 @property (readwrite) CGSize noteLayerSize;
-@property (readwrite) CGFloat xNotesSpace;  /*percentage of width  of note*/
-@property (readwrite) CGFloat yNotesSpace;  /*percentage of height of note*/
-@property (readwrite) CGFloat minXMargin;
-@property (readwrite) CGFloat minYMargin;
+@property (readwrite) CGFloat minXNotesSpace;  /*percentage of width  of note*/
+@property (readwrite) CGFloat minYNotesSpace;  /*percentage of height of note*/
+@property (readwrite) CGFloat xMargin;
+@property (readwrite) CGFloat yMargin;
 
-@property (readonly) CGFloat xMargin;
-@property (readonly) CGFloat yMargin;
+@property (readonly) CGFloat xNotesSpace;  /*percentage of width  of note*/
+@property (readonly) CGFloat yNotesSpace;  /*percentage of height of note*/
 @property (readonly) NotePosition* fretboardSize;
 
 /* After changing desired properties function of layoutNotes family should be called*/

@@ -60,9 +60,11 @@
 @interface FretboardView ()
 
 @property (readwrite) NotePosition* fretboardSize;
-@property (readwrite) CGFloat xMargin;
-@property (readwrite) CGFloat yMargin;
 @property (strong, readwrite) TouchesWithNotePositions* touchesWithNotesPositions;
+@property (strong, readwrite) UIImageView *blurView;
+@property (nonatomic, strong) CALayer *maskLayer;
+@property (readwrite) CGFloat xNotesSpace;  /*percentage of width  of note*/
+@property (readwrite) CGFloat yNotesSpace;  /*percentage of height of note*/
 
 @end
 
@@ -79,49 +81,67 @@
     self.multipleTouchEnabled = TRUE;
 	self.touchesWithNotesPositions = [[TouchesWithNotePositions alloc] init];
 	self.fretboardSize = [[NotePosition alloc] init];
+	
+	self.blurView = [[UIImageView alloc] initWithFrame:  CGRectMake(0, 0, 768, 1024 )];
+	
+	[self setupBlurredImage];
+	[self addSubview: self.blurView];
+	self.blurView.hidden = false;
+}
+
+- (void)setupBlurredImage {
+	UIImage *theImage = [UIImage imageNamed:@"forblur_background"];
+	
+	CIContext *context = [CIContext contextWithOptions: nil];
+	CIImage *inputImage = [CIImage imageWithCGImage:theImage.CGImage];
+	
+	CIFilter *filter = [CIFilter filterWithName:@"CIGaussianBlur"];
+	[filter setValue:inputImage forKey:kCIInputImageKey];
+	[filter setValue:[NSNumber numberWithFloat:70.0f] forKey:@"inputRadius"];
+	CIImage *result = [filter valueForKey:kCIOutputImageKey];
+	CGImageRef cgImage = [context createCGImage:result fromRect:[inputImage extent]];
+	
+	self.blurView.image = [UIImage imageWithCGImage:cgImage];
 }
 
 
 #pragma mark __LayoutNotes
 
 - (void) layoutNotesWithNewSize:(CGRect)newSize {
-	while ([self.layer.sublayers count] > 2)
-		[[self.layer.sublayers objectAtIndex:2] removeFromSuperlayer];
-
-	
 	CGRect screenRect = newSize;
     CGFloat width  = screenRect.size.width;
     CGFloat height = screenRect.size.height;
 	
-	self.fretboardSize.x  = (width -2*_minXMargin)/_noteLayerSize.width /(_xNotesSpace+1);
-	self.fretboardSize.y  = (height-2*_minYMargin)/_noteLayerSize.height/(_yNotesSpace+1);
-	self.xMargin = (width -  (_fretboardSize.x) * _noteLayerSize.width  - (_fretboardSize.x-1) * _noteLayerSize.width  * _xNotesSpace)/2;
-	self.yMargin = (height - (_fretboardSize.y) * _noteLayerSize.height - (_fretboardSize.y-1) * _noteLayerSize.height * _yNotesSpace)/2;
-    
+	self.fretboardSize.x  = (width -2*_xMargin)/_noteLayerSize.width /(_minXNotesSpace+1);
+	self.fretboardSize.y  = (height-2*_yMargin)/_noteLayerSize.height/(_minYNotesSpace+1);
+	
+	self.xNotesSpace = (CGFloat)((width  - 2*_xMargin) - (_fretboardSize.x-1) * _noteLayerSize.width ) / (CGFloat)(_fretboardSize.x-2) / (CGFloat)_noteLayerSize.width;
+	self.yNotesSpace = (CGFloat)((height - 2*_yMargin) - (_fretboardSize.y-1) * _noteLayerSize.height) / (CGFloat)(_fretboardSize.y-2) / (CGFloat)_noteLayerSize.height;
+	
+	self.maskLayer = [CALayer layer];
+	self.maskLayer.frame = self.frame;
+	
     for(int istr = 0; istr < _fretboardSize.y; ++istr)
         for(int inot = 0; inot < _fretboardSize.x; ++inot )
         {
-			UIVisualEffect *blurEffect;
-			blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
-		
-			UIView* note = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+			CALayer* note = [CALayer layer];
 			note.frame = CGRectMake(_xMargin  + inot*_noteLayerSize.width *(1+_xNotesSpace) + _noteLayerSize.width/2,
-								_yMargin  + istr*_noteLayerSize.height*(1+_yNotesSpace) + _noteLayerSize.height/2,
+									_yMargin  + istr*_noteLayerSize.height*(1+_yNotesSpace) + _noteLayerSize.height/2,
 									NOTE_UNACTIVE_RADIUS*2, NOTE_UNACTIVE_RADIUS*2);
-			note.layer.cornerRadius = NOTE_UNACTIVE_RADIUS;
+			note.cornerRadius = NOTE_UNACTIVE_RADIUS;
+			note.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:1].CGColor;
+			note.borderWidth = 10;
+			note.borderColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:1].CGColor;
 		
-			[note setClipsToBounds:true ];
-			note.layer.position = CGPointMake(_xMargin  + inot*_noteLayerSize.width *(1+_xNotesSpace) + _noteLayerSize.width/2,
+			note.position = CGPointMake(_xMargin  + inot*_noteLayerSize.width *(1+_xNotesSpace) + _noteLayerSize.width/2,
                                         _yMargin  + istr*_noteLayerSize.height*(1+_yNotesSpace) + _noteLayerSize.height/2);
-			note.layer.bounds = CGRectMake(0, 0, NOTE_UNACTIVE_RADIUS*2, NOTE_UNACTIVE_RADIUS*2);
+			note.bounds = CGRectMake(0, 0, NOTE_UNACTIVE_RADIUS*2, NOTE_UNACTIVE_RADIUS*2);
 		
-			[self addSubview:note];
+			[self.maskLayer addSublayer: note];
         }
 	
-	
-	
-	//[self setNeedsDisplay];
-	
+	self.blurView.layer.mask = self.maskLayer;
+	[self setNeedsDisplay];
 }
 
 - (void) layoutNotes {
@@ -151,7 +171,7 @@
 	NotePosition* copy = [[NotePosition alloc] init];
 	copy.y = self.fretboardSize.y - notePosition.y -1;
 	copy.x = notePosition.x;
-	return [self.layer.sublayers objectAtIndex:2+ _fretboardSize.x*copy.y + copy.x];
+	return [self.blurView.layer.mask.sublayers objectAtIndex: _fretboardSize.x*copy.y + copy.x];
 }
 
 
@@ -215,46 +235,5 @@
 	
 	[self.receiverOfFretboardEvents notesReleased: setOfNotes];
 }
-
-
-
-#pragma mark __CustomDrawing
-
-/* @TODO Testing appearance of "cut shapes" in a view; propably code should be improved */
-/*- (void)drawRect:(CGRect)rect {
-	UIColor *backgroundColor = CONTAINERS_BACKGROUND_COLOR;
-	[backgroundColor setFill];
-	UIRectFill(rect);
-	
-	CGRect screenRect = self.bounds;
-	CGFloat width  = screenRect.size.width;
-	CGFloat height = screenRect.size.height;
-	
-	self.fretboardSize.x  = (width -2*_minXMargin)/_noteLayerSize.width /(_xNotesSpace+1);
-	self.fretboardSize.y  = (height-2*_minYMargin)/_noteLayerSize.height/(_yNotesSpace+1);
-	self.xMargin = (width -  (_fretboardSize.x) * _noteLayerSize.width  - (_fretboardSize.x-1) * _noteLayerSize.width  * _xNotesSpace)/2;
-	self.yMargin = (height - (_fretboardSize.y) * _noteLayerSize.height - (_fretboardSize.y-1) * _noteLayerSize.height * _yNotesSpace)/2;
-	
-	for(int istr = 0; istr < _fretboardSize.y; ++istr)
-		for(int inot = 0; inot < _fretboardSize.x; ++inot )
-		{
-			CGRect holeRect = CGRectMake(0, 0, 0, 0);
-			holeRect.origin = CGPointMake(_xMargin  + inot*_noteLayerSize.width *(1+_xNotesSpace) , _yMargin  + istr*_noteLayerSize.height*(1+_yNotesSpace) );
-			holeRect.size = CGSizeMake(_noteLayerSize.width, _noteLayerSize.height);
-		
-			CGRect holeRectIntersection = CGRectIntersection( holeRect, rect );
-			CGContextRef context = UIGraphicsGetCurrentContext();
-			CGContextSaveGState(context);
-			if( CGRectIntersectsRect( holeRectIntersection, rect ) )
-			{
-				CGContextAddEllipseInRect(context, holeRectIntersection);
-				CGContextClip(context);
-				CGContextClearRect(context, holeRectIntersection);
-				CGContextSetFillColorWithColor( context, [UIColor clearColor].CGColor );
-				CGContextFillRect( context, holeRectIntersection);
-				CGContextRestoreGState(context);
-			}
-		}
-}*/
 
 @end

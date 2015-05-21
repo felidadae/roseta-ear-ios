@@ -42,7 +42,7 @@
 - (void) prepareBackground {
 	felidadaeAppDelegate *delegate = [[UIApplication sharedApplication] delegate];
 	self.background = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 1024, 768)];
-	self.background.backgroundColor = BACKGROUND_COLOR;
+	//self.background.backgroundColor = BACKGROUND_COLOR;
 	self.background.autoresizingMask = UIViewAutoresizingNone;
 	if(self.view.bounds.size.width < self.view.bounds.size.height) {
 		CGFloat width = self.view.frame.size.width;

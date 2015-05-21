@@ -79,10 +79,10 @@
 	self.fretboardView.backgroundColor = CONTAINERS_BACKGROUND_COLOR;
 	
 	self.fretboardView.noteLayerSize 	= CGSizeMake(NOTE_DIAMETER,NOTE_DIAMETER);
-	self.fretboardView.xNotesSpace 		= X_NOTE_SPACE;
-	self.fretboardView.yNotesSpace 		= Y_NOTE_SPACE;
-	self.fretboardView.minXMargin  		= CONTAINER_MIN_X_MARGIN;
-	self.fretboardView.minYMargin  		= CONTAINER_MIN_Y_MARGIN;
+	self.fretboardView.minXNotesSpace 	= X_NOTE_SPACE;
+	self.fretboardView.minYNotesSpace 	= Y_NOTE_SPACE;
+	self.fretboardView.xMargin  		= CONTAINER_MIN_X_MARGIN;
+	self.fretboardView.yMargin  		= CONTAINER_MIN_Y_MARGIN;
 	
 	[self.fretboardView layoutNotes];
 }

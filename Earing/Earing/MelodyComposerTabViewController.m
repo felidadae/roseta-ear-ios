@@ -53,21 +53,21 @@
 }
 
 - (void) colourButtons {
-	self.nwwMelodyButton.layer.borderWidth = 1;
+	self.nwwMelodyButton.layer.borderWidth = 15;
 	self.nwwMelodyButton.layer.borderColor       = [BUTTON_BORDER_COLOR CGColor];
 	self.nwwMelodyButton.layer.backgroundColor   = [BUTTON_COLOUR CGColor];
 	//self.nwwMelodyButton.alpha = BUTTON_ALPHA;
 	self.nwwMelodyButton.layer.cornerRadius 	= BUTTON_HEIGHT/2;
 	//self.nwwMelodyButton.layer addSublayer:
 	
-	self.repeatMelodyButton.layer.borderWidth = 1;
+	self.repeatMelodyButton.layer.borderWidth = 0;
 	self.repeatMelodyButton.layer.borderColor     = [BUTTON_BORDER_COLOR CGColor];
 	self.repeatMelodyButton.layer.backgroundColor = [BUTTON_COLOUR CGColor];
 	//self.repeatMelodyButton.alpha = BUTTON_ALPHA;
 	self.repeatMelodyButton.layer.cornerRadius 	= BUTTON_HEIGHT/2;
 	
 	
-	self.showSettingsButton.layer.borderWidth = 1;
+	self.showSettingsButton.layer.borderWidth = 25;
 	self.showSettingsButton.layer.borderColor       = [BUTTON_BORDER_COLOR CGColor];
 	self.showSettingsButton.layer.backgroundColor   = [BUTTON_COLOUR CGColor];
 	//self.showSettingsButton.alpha = BUTTON_ALPHA;
