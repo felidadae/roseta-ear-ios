@@ -1,7 +1,7 @@
 
 #import "MelodyComposerTabViewController.h"
 #import "FretboardDestinationBridge.h"
-#import "MelodyComposer.h"
+#import "MelodyComposerBridge.h"
 #include "UIParams.h"
 #include "MelodyComposerSettingsTabViewController.h"
 #include "DrawView.h"
@@ -10,7 +10,7 @@
 
 @interface MelodyComposerTabViewController ()
 
-@property (strong, nonatomic) MelodyComposer* melodyComposer;
+@property (strong, nonatomic) MelodyComposerBridge* melodyComposer;
 
 @property (weak, nonatomic) IBOutlet UIButton *nwwMelodyButton;
 @property (weak, nonatomic) IBOutlet UIButton *repeatMelodyButton;
@@ -31,10 +31,10 @@
     [super viewDidLoad];
 	self.view.backgroundColor = CONTAINERS_BACKGROUND_COLOR;
 	
-	self.melodyComposer = [[MelodyComposer alloc] init];
+	self.melodyComposer = [[MelodyComposerBridge alloc] init];
 	self.melodyComposer.maxInterval = 5;
-	self.melodyComposer.minimumLengthOfNote = 0.5;
-	self.melodyComposer.phraseLength = 5;
+	self.melodyComposer.minNoteLength = 0.5;
+	self.melodyComposer.phraseSize = 5;
 
 	[self setSizeOfButtons];
 	[self colourButtons];

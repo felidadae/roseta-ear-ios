@@ -1,10 +1,10 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "MelodyComposer.h"
+#import "MelodyComposerBridge.h"
 
 @interface MelodyComposerSettingsTabViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>
 
-@property (weak, nonatomic) MelodyComposer* melodyComposer;
+@property (weak, nonatomic) MelodyComposerBridge* melodyComposer;
 
 @end

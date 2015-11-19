@@ -6,13 +6,13 @@
 #define MAIN_F 0
 
 //BackgroundColor for MainView
-#define BACKGROUND_COLOR [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]]
-//#define BACKGROUND_COLOR [UIColor colorWithRed:1 green:1 blue:1 alpha:0]
-#define BACKGROUND_COLORxsd [UIColor colorWithRed:MAIN_B green:MAIN_B blue:MAIN_B alpha:0.6]
+//#define BACKGROUND_COLOR [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]]
+#define BACKGROUND_COLOR [UIColor colorWithRed:1 green:1 blue:1 alpha:0]
+//#define BACKGROUND_COLOR [UIColor colorWithRed:MAIN_B green:MAIN_B blue:MAIN_B alpha:0.6]
 
 
 //Containers
-#define CONTAINERS_BACKGROUND_ALPHA 0.05
+#define CONTAINERS_BACKGROUND_ALPHA 0.3
 #define CONTAINERS_BACKGROUND_COLOR [UIColor colorWithRed:MAIN_F green:MAIN_F blue:MAIN_F alpha:CONTAINERS_BACKGROUND_ALPHA]
 
 //Fretboard

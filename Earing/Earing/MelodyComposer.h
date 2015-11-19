@@ -1,14 +1,33 @@
+#ifndef __Earing__MelodyComposer__
+#define __Earing__MelodyComposer__
 
-#import <Foundation/Foundation.h>
+#include <iostream>
+#include <vector>
 
 
-@interface MelodyComposer : NSObject
+class Note {
+public:
+	float duration;
+	unsigned frequencyIndex;
+};
 
-@property (readonly) NSArray *lastMelody;
-@property (readwrite) NSUInteger maxInterval;
-@property (readwrite) NSUInteger phraseLength; 
-@property (readwrite) float minimumLengthOfNote;
+class MelodyComposer {
+public:
+	std::vector<Note> lastMelody_;
 	
--(void) newMelodyWithMin: (NSUInteger) minIdx withMaxFrequencyIndexes: (NSUInteger) maxIdx;
+	//State
+	unsigned minAllowedIdx_;
+	unsigned maxAllowedIdx_;
+	
+	float minNoteLength_;
+	float maxNoteLengthK_; //maxNoteLengthAsMultiplyOfMin_
+	
+	unsigned melodySize_; 
+	unsigned maxInterval_;
+	
+	MelodyComposer();
 
-@end
+	std::vector<Note>& compose();
+};
+
+#endif

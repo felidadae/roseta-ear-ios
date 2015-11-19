@@ -115,8 +115,10 @@
 	self.fretboardSize.x  = (width -2*_xMargin)/_noteLayerSize.width /(_minXNotesSpace+1);
 	self.fretboardSize.y  = (height-2*_yMargin)/_noteLayerSize.height/(_minYNotesSpace+1);
 	
-	self.xNotesSpace = (CGFloat)((width  - 2*_xMargin) - (_fretboardSize.x-1) * _noteLayerSize.width ) / (CGFloat)(_fretboardSize.x-2) / (CGFloat)_noteLayerSize.width;
-	self.yNotesSpace = (CGFloat)((height - 2*_yMargin) - (_fretboardSize.y-1) * _noteLayerSize.height) / (CGFloat)(_fretboardSize.y-2) / (CGFloat)_noteLayerSize.height;
+	self.xNotesSpace = (CGFloat)((width  - 2*_xMargin) - (_fretboardSize.x-1) * _noteLayerSize.width )
+		/ (CGFloat)(_fretboardSize.x-1) / (CGFloat)_noteLayerSize.width;
+	self.yNotesSpace = (CGFloat)((height - 2*_yMargin) - (_fretboardSize.y-1) * _noteLayerSize.height)
+		/ (CGFloat)(_fretboardSize.y-1) / (CGFloat)_noteLayerSize.height;
 	
 	self.maskLayer = [CALayer layer];
 	self.maskLayer.frame = self.frame;

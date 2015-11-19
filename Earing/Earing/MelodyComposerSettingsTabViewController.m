@@ -31,8 +31,9 @@
 	self.minimumNoteLengthPicker.dataSource = self;
 	self.minimumNoteLengthPicker.delegate 	= self;
 	
-	[self.maxIntervalPicker 		selectRow:[self.melodyComposer maxInterval]-2 			inComponent:0 animated:false ];
-	[self.minimumNoteLengthPicker 	selectRow:[self.melodyComposer minimumLengthOfNote]*10-1 	inComponent:0 animated:false ];
+	[self.maxIntervalPicker 		selectRow:[self.melodyComposer maxInterval]-2 		inComponent:0 animated:false ];
+	[self.minimumNoteLengthPicker 	selectRow:[self.melodyComposer minNoteLength]*10-1 	inComponent:0 animated:false ];
+	[self.minimumNoteLengthPicker 	selectRow:3 										inComponent:0 animated:false ];
 } 
 
 
@@ -46,11 +47,11 @@
 	}
 	if (pickerView == self.minimumNoteLengthPicker)
 	{
-		[self.melodyComposer setMinimumLengthOfNote: ((float)row+1)*0.1];
+		[self.melodyComposer setMinNoteLength: ((float)row+1)*0.1];
 	}
 	if (pickerView == self.phraseLengthPicker)
 	{
-		[self.melodyComposer setPhraseLength:row];
+		[self.melodyComposer setPhraseSize:row+1];
 	}
 }
 
@@ -64,7 +65,8 @@
 	return 50;
 }
 
-- (NSAttributedString *)pickerView:(UIPickerView *)pickerView attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component
+- (NSAttributedString *)pickerView:(UIPickerView *)pickerView
+	attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
 	NSString *title = @"";
 	if (pickerView == self.maxIntervalPicker)
@@ -73,7 +75,9 @@
 		title = [NSString stringWithFormat:@"%.01f", (float)((float)(row+1)*0.1)];
 	if (pickerView == self.phraseLengthPicker)
 		title = [NSString stringWithFormat:@"%d", (int)(row+2)];
-	NSAttributedString *attString = [[NSAttributedString alloc] initWithString:title attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+	NSAttributedString *attString =
+		[[NSAttributedString alloc] initWithString:title
+			attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
 	return attString;
 }
 

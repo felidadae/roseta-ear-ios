@@ -35,7 +35,7 @@
 		0C7CFEA41A4C824C00DD505C /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7CFEA31A4C824C00DD505C /* Accelerate.framework */; };
 		0C7CFEA61A4DCDE800DD505C /* FourierTransformBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C7CFEA51A4DCDE800DD505C /* FourierTransformBox.cpp */; };
 		0C8D878F1953A3C800F30315 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C8D878D1953A3C800F30315 /* Main.storyboard */; };
-		0C8D879219544E8900F30315 /* MelodyComposer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8D879119544E8900F30315 /* MelodyComposer.m */; };
+		0C8D879219544E8900F30315 /* MelodyComposerBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0C8D879119544E8900F30315 /* MelodyComposerBridge.mm */; };
 		0C8E7F011A78076A001A8CBD /* FretboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8E7F001A78076A001A8CBD /* FretboardViewController.m */; };
 		0C8E7F041A7807F4001A8CBD /* MelodyComposerTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8E7F031A7807F4001A8CBD /* MelodyComposerTabViewController.m */; };
 		0C8E7F071A7808A4001A8CBD /* LooperTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8E7F061A7808A4001A8CBD /* LooperTabViewController.m */; };
@@ -48,6 +48,7 @@
 		0CE608371A82E40E00D0F8FD /* GlidingValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE608361A82E40E00D0F8FD /* GlidingValue.m */; };
 		0CE608391A82E44100D0F8FD /* NotePosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE608381A82E44100D0F8FD /* NotePosition.m */; };
 		0CEBF0221A7ED6C000389C20 /* MidiSettingsTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CEBF0211A7ED6C000389C20 /* MidiSettingsTabViewController.m */; };
+		0CF192321BA5B8D0007B79F8 /* MelodyComposer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CF192301BA5B8D0007B79F8 /* MelodyComposer.cpp */; };
 		0CF7935A1A967279009BA575 /* TabChooserButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF793591A967279009BA575 /* TabChooserButton.m */; };
 /* End PBXBuildFile section */
 
@@ -113,8 +114,8 @@
 		0C7CFEA31A4C824C00DD505C /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		0C7CFEA51A4DCDE800DD505C /* FourierTransformBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FourierTransformBox.cpp; sourceTree = "<group>"; };
 		0C8D878E1953A3C800F30315 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Earing/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0C8D879019544E8900F30315 /* MelodyComposer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MelodyComposer.h; sourceTree = "<group>"; };
-		0C8D879119544E8900F30315 /* MelodyComposer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MelodyComposer.m; sourceTree = "<group>"; };
+		0C8D879019544E8900F30315 /* MelodyComposerBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MelodyComposerBridge.h; sourceTree = "<group>"; };
+		0C8D879119544E8900F30315 /* MelodyComposerBridge.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MelodyComposerBridge.mm; sourceTree = "<group>"; };
 		0C8E7EFF1A78076A001A8CBD /* FretboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FretboardViewController.h; sourceTree = "<group>"; };
 		0C8E7F001A78076A001A8CBD /* FretboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FretboardViewController.m; sourceTree = "<group>"; };
 		0C8E7F021A7807F4001A8CBD /* MelodyComposerTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MelodyComposerTabViewController.h; sourceTree = "<group>"; };
@@ -142,6 +143,8 @@
 		0CE608381A82E44100D0F8FD /* NotePosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotePosition.m; sourceTree = "<group>"; };
 		0CEBF0201A7ED6C000389C20 /* MidiSettingsTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidiSettingsTabViewController.h; sourceTree = "<group>"; };
 		0CEBF0211A7ED6C000389C20 /* MidiSettingsTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MidiSettingsTabViewController.m; sourceTree = "<group>"; };
+		0CF192301BA5B8D0007B79F8 /* MelodyComposer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MelodyComposer.cpp; sourceTree = "<group>"; };
+		0CF192311BA5B8D0007B79F8 /* MelodyComposer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MelodyComposer.h; sourceTree = "<group>"; };
 		0CF793581A967279009BA575 /* TabChooserButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabChooserButton.h; sourceTree = "<group>"; };
 		0CF793591A967279009BA575 /* TabChooserButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabChooserButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -250,8 +253,10 @@
 		0C1C5F631951FC6800F565AC /* MelodyComposer */ = {
 			isa = PBXGroup;
 			children = (
-				0C8D879019544E8900F30315 /* MelodyComposer.h */,
-				0C8D879119544E8900F30315 /* MelodyComposer.m */,
+				0C8D879019544E8900F30315 /* MelodyComposerBridge.h */,
+				0C8D879119544E8900F30315 /* MelodyComposerBridge.mm */,
+				0CF192311BA5B8D0007B79F8 /* MelodyComposer.h */,
+				0CF192301BA5B8D0007B79F8 /* MelodyComposer.cpp */,
 			);
 			name = MelodyComposer;
 			sourceTree = "<group>";
@@ -604,7 +609,7 @@
 				0C245C451AA8AC130029E6CD /* MelodyComposerSettingsTabViewController.m in Sources */,
 				0CE608391A82E44100D0F8FD /* NotePosition.m in Sources */,
 				0C7BF599192176D60082F2A5 /* Synth.cpp in Sources */,
-				0C8D879219544E8900F30315 /* MelodyComposer.m in Sources */,
+				0C8D879219544E8900F30315 /* MelodyComposerBridge.mm in Sources */,
 				0CF7935A1A967279009BA575 /* TabChooserButton.m in Sources */,
 				0C7CFEA61A4DCDE800DD505C /* FourierTransformBox.cpp in Sources */,
 				0C8E7F011A78076A001A8CBD /* FretboardViewController.m in Sources */,
@@ -614,6 +619,7 @@
 				0C746C481ABC916500AE0532 /* DrawView.m in Sources */,
 				0C3D4C9118F401FD0030A162 /* felidadaeAppDelegate.m in Sources */,
 				0C3D4CB718F404570030A162 /* FretboardView.m in Sources */,
+				0CF192321BA5B8D0007B79F8 /* MelodyComposer.cpp in Sources */,
 				0CEBF0221A7ED6C000389C20 /* MidiSettingsTabViewController.m in Sources */,
 				0C3D4C8D18F401FD0030A162 /* main.m in Sources */,
 			);
